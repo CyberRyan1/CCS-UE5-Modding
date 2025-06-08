@@ -28,7 +28,7 @@ Now there should be no errors or anything no matter what files you open for this
 This is the best way, as there is a script and we can just repoint `FModel` to the new folder with the legacy format assets we are making.
 
 ### 2.1. Actual conversion
-*(**Note:** it's recommended to run these two commands using windows powershell that is ran as an administrator)*
+*(**Note:** it's recommended to run the following two commands using windows powershell that is ran as an administrator)*
 1. Execute `start_tools_RUNNER.bat`
 2. Then we run `.\convert_game_RUNNER.bat`. This will ask you for two arguments:
 - For the first argument, put `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\` *(**Note**: you might need to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in)*
