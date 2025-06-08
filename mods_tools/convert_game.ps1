@@ -13,5 +13,15 @@ if (-not $outputFile.ToLower().EndsWith(".pak")) {
     exit 1
 }
 
+# debug statements
+Write-Host "Source Folder: $sourceFolder"
+Write-Host "Output File: $outputFile"
+
+# Ensuring the output folder exists
+$outputDir = Split-Path $outputFile
+if (-not (Test-Path $outputDir)) {
+    New-Item -ItemType Directory -Path $outputDir | Out-Null
+}
+
 $sourceFolder = $sourceFolder.TrimEnd('\', '/')
 & ./__tools/retoc/retoc.exe to-legacy $sourceFolder $outputFile
