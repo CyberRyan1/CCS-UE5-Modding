@@ -30,10 +30,9 @@ This is the best way, as there is a script and we can just repoint `FModel` to t
 ### 2.1. Actual conversion
 1. Execute `start_tools_RUNNER.bat`
 2. Then we run `.\convert_game_RUNNER.bat`. This will ask you for two arguments:
-- - For the first argument, put `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\`
+- - For the first argument, put `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\` *(**Note**: you might need to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in)*
 - - For the second argument, put `.\legacy_files\legacy_p.pak`
 
-**Note:** You will most likely have to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in.
 You can also store the resulting legacy file somewhere else but I personally like to have it contained in the same folder so its just easier to find.
 
 ### 2.2. Setting up FModel to use the legacy assets instead
