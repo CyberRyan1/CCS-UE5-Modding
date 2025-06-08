@@ -1,7 +1,7 @@
 # Modding Guide (07.06.2025)
 This is just a quick modding guide explaining how to use the linked tools.
 
-## 1. FModel for exploration or dumping Models/Textures
+## 1. FModel for Exploration or Dumping Models/Textures
 This is the easiest step and also the base for modding later as finding what you want to mod and extracting it is easiest with `FModel`.
 
 ### 1.1. Setting up the tools
@@ -24,7 +24,7 @@ So now we are in `FModel` and can explore the Zen compressed files. We now just 
 
 Now there should be no errors or anything no matter what files you open for this game.
 
-## 2. Converting Zen files to Legacy format
+## 2. Converting Zen Files to Legacy Format
 This is the best way, as there is a script and we can just repoint `FModel` to the new folder with the legacy format assets we are making.
 
 ### 2.1. Actual conversion
@@ -45,7 +45,7 @@ You can also store the resulting legacy file somewhere else, but I personally li
 
 This means you can now browse the legacy assets and extract blueprints for UE modding tools. Most tools don't work with the Zen format (and in general UE5 modding is not well supported from the tooling side of things)
 
-## 3. Creating a mod
+## 3. Creating a Mod
 To create a mod you will now need to combine the legacy assets and stuff you extract from them together with modifying stuff in them as well as packing them back up and converting them back into the Zen format.
 
 ### 3.1. Finding what you want to mod
@@ -73,7 +73,7 @@ Now we wanna load `BP_MoneyCounterTIer2_Euro` into `UAssetGUI`. For this we clic
 
 Now that the file is loaded we can click `Edit` in the ribbon menu at the top and the `Find` (or press `Ctrl+F`). In the find box that opens we type the amount of bills the counter can hold so `600` and then click `Next` at the bottom. We click the `Next` button until we see something that looks like it is what we are looking for. In this case it is when it highlights a line in a data table that has the index `1` and the name value is `MaxIncomingBillsCount`. The Value should be `600` as thats what we knew. In this case we can see the type for this property is `IntProperty` meaning it can range from `-2147483648` to `2147483647`. So we enter the new amount we want the input to hold. In this example we will choose `2000` just for demonstration purposes. Double click the `600` field in the table. Then replace the value with `2000`. Clicking on `File` in the ribbon menu at the top and then `Save` (or pressing `Ctrl+S`) will save the change we made to the `.uasset` AND `.uexp` files.
 
-### 3.4. packaging the mod
+### 3.4. Packaging the mod
 This is quite an easy step as I wrote a Powershell script to take care of all the more painful parts.
 
 For this we can use the terminal that `start_tools.ps1` opened. We then type `pack` and press tab (or type out `.\pack.ps1`) and we will follow it up with the folder to compress. In this case thats `.\counter_mod_1234\`. Then we specify the output filename and path. For this example we will use the local directory and a simple name so `.\my_counter_mod_P.pak`. Make sure that the filename ends in `_P.pak`.
@@ -96,10 +96,10 @@ If we want to zip the output it is `.\pack.ps1 .\money_counter_1234\ .\my_counte
 
 Of course these can be combined as well into `.\pack.ps1 .\money_counter_1234\ .\my_counter_mod_P.pak -p 10 -z -cleanup` so we give a priority, zip the files and then delete the files we zipped.
 
-## 4. Using the mod
+## 4. Using the Mod
 To use the mod we place the `.pak`, `.utoc` and `.ucas` files we created into `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\~mods`. The folder `~mods` is mainly chosen as a sort of community convention of Unreal Engine game mods. the mods will load when just putting them in `Paks` but it keeps it nice and clean if they just go into `~mods` especially if the game expands to have more `.pak`, `.utoc` and `.ucas` files itself instead of 1 monolithic file as it does now.
 
-## 5. Special section for people adventurous enough to try kismet modding
+## 5. Special Section for People Adventurous Enough to Try Kismet Modding
 There is a tool included in this for generating kismet graphs (one of the few tools that work with UE5 kismet blueprints).
 
 To use it just run `.\__tools\Kismet-Analyzer\kismet-analyzer.exe cfg .\counter_mod_1234\CashCleanerSimulator\Content\Core\Objects\BP_MoneyCounterTier2_Euro.uasset --ue-version VER_UE5_4 -m .\__tools\Mappings.usmap --dot .\__tools\Graphviz\bin\dot.exe`. The path of `.\counter_mod_1234\CashCleanerSimulator\Content\Core\Objects\BP_MoneyCounterTier2_Euro.uasset` is from the example above just to have an example in general.
