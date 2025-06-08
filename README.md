@@ -33,7 +33,8 @@ This is the best way, as there is a script and we can just repoint `FModel` to t
 - - For the first argument, put `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\`
 - - For the second argument, put `.\legacy_files\legacy_p.pak`
 
-You will most likely have to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in. You can also store the resulting legacy file somewhere else but I personally like to have it contained in the same folder so its just easier to find.
+**Note:** You will most likely have to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in.
+You can also store the resulting legacy file somewhere else but I personally like to have it contained in the same folder so its just easier to find.
 
 ### 2.2. Setting up FModel to use the legacy assets instead
 1. Open `FModel.exe`
