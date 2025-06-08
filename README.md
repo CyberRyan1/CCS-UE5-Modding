@@ -37,7 +37,7 @@ This is the best way, as there is a script and we can just repoint `FModel` to t
 You can also store the resulting legacy file somewhere else, but I personally like to have it contained in the same folder so its just easier to find.
 
 ---
-# Note to self: stopped here!
+# 🛑🛑🛑 Note to self: stopped here!
 ---
 
 ### 2.2. Setting up FModel to use the legacy assets instead
