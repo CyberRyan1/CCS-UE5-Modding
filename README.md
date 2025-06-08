@@ -8,7 +8,7 @@ This is the easiest step and also the base for modding later as finding what you
 1. Extract zip file (best to place it into its own folder like `CCS Mods` or something
 2. Go to `__tools` in the files you just extracted.
 3. Open `FModel` and then start `FModel.exe`
-4. At the bottom of the window you can select the `CashCleanerSImulator` game folder in your steam library and name it
+4. At the bottom of the window you can select the `CashCleanerSimulator` game folder in your steam library and name it
 5. Click the blue `+` icon to add it as a selectable game and select it at the top
 6. Set the version to GAME_UE5_4
 7. Click `OK`
