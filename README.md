@@ -5,7 +5,7 @@ This is just a quick modding guide explaining how to use the linked tools.
 This is the easiest step and also the base for modding later as finding what you want to mod and extracting it is easiest with `FModel`.
 
 ### 1.1. Setting up the tools
-1. Extract zip file (best to place it into its own folder like `CCS Mods` or something
+1. Download this repo as a zip file and extract it (best to place it into its own folder named `CCS Mods` or something of the like)
 2. Go to `__tools` in the files you just extracted.
 3. Open `FModel` and then start `FModel.exe`
 4. At the bottom of the window you can select the `CashCleanerSimulator` game folder in your steam library and name it
@@ -25,11 +25,13 @@ So now we are in `FModel` and can explore the Zen compressed files. We now just 
 Now there should be no errors or anything no matter what files you open for this game.
 
 ## 2. Converting Zen files to Legacy format
-This is best as there is a script and we can just repoint `FModel` to the new folder with the legacy format assets we are making.
+This is the best way, as there is a script and we can just repoint `FModel` to the new folder with the legacy format assets we are making.
 
 ### 2.1. Actual conversion
-1. Execute `start_tools.ps1` from the files you extracted by right clicking it (or start a terminal in the folder/navigate to it)
-2. Then we run `.\convert_game.ps1 'C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\' .\legacy_files\legacy_p.pak`
+1. Execute `start_tools_RUNNER.bat`
+2. Then we run `.\convert_game_RUNNER.bat`. This will ask you for two arguments:
+- - For the first argument, put `C:\Program Files\Steam\steamapps\common\Cash Cleaner Simulator\CashCleanerSimulator\Content\Paks\`
+- - For the second argument, put `.\legacy_files\legacy_p.pak`
 
 You will most likely have to replace `C:\Program Files\Steam` with the actual path to your steam installation/library that the game is in. You can also store the resulting legacy file somewhere else but I personally like to have it contained in the same folder so its just easier to find.
 
