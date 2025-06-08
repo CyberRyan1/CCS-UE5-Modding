@@ -1,0 +1,116 @@
+2025-06-08 00:10:59 [INF] FModel.App.OnStartup: Version 4.4.4.0 (8ba756ade5e9eced8fe64710a86b567c4ba03cc5)
+2025-06-08 00:10:59 [INF] FModel.App.OnStartup: Windows 11 Pro (64-bit)
+2025-06-08 00:10:59 [INF] FModel.App.OnStartup: .NET 8.0.16
+2025-06-08 00:10:59 [INF] FModel.App.OnStartup: Culture en-US
+2025-06-08 00:12:21 [ERR] FModel.App.OnUnhandledException: System.Windows.Markup.XamlParseException: The invocation of the constructor on type 'FModel.MainWindow' that matches the specified binding constraints threw an exception.
+ ---> System.TypeInitializationException: The type initializer for 'FModel.Services.ApplicationService' threw an exception.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at FModel.ViewModels.ApplicationViewModel.AvoidEmptyGameDirectory(Boolean bAlreadyLaunched)
+   at FModel.ViewModels.ApplicationViewModel..ctor()
+   at FModel.Services.ApplicationService..cctor()
+   --- End of inner exception stack trace ---
+   at FModel.Services.ApplicationService.get_ApplicationView()
+   at FModel.MainWindow.get__applicationView()
+   at FModel.MainWindow..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   at System.Windows.Application.DoStartup()
+   at System.Windows.Application.<.ctor>b__1_0(Object unused)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2025-06-08 00:12:25 [ERR] FModel.App.OnUnhandledException: System.TypeInitializationException: The type initializer for 'FModel.Services.ApplicationService' threw an exception.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at FModel.ViewModels.ApplicationViewModel.AvoidEmptyGameDirectory(Boolean bAlreadyLaunched)
+   at FModel.ViewModels.ApplicationViewModel..ctor()
+   at FModel.Services.ApplicationService..cctor()
+   --- End of inner exception stack trace ---
+   at FModel.Services.ApplicationService.get_ApplicationView()
+   at FModel.App.OnUnhandledException(Object sender, DispatcherUnhandledExceptionEventArgs e)
+   at System.Windows.Threading.Dispatcher.CatchException(Exception e)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   at System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   at MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Threading.DispatcherOperation.Invoke()
+   at System.Windows.Threading.Dispatcher.ProcessQueue()
+   at System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2025-06-08 00:12:32 [INF] FModel.App.OnStartup: Version 4.4.4.0 (8ba756ade5e9eced8fe64710a86b567c4ba03cc5)
+2025-06-08 00:12:32 [INF] FModel.App.OnStartup: Windows 11 Pro (64-bit)
+2025-06-08 00:12:32 [INF] FModel.App.OnStartup: .NET 8.0.16
+2025-06-08 00:12:32 [INF] FModel.App.OnStartup: Culture en-US
+2025-06-08 00:12:48 [INF] CUE4Parse.Compression.OodleHelper+<DownloadOodleDllAsync>d__14.MoveNext: Successfully downloaded oodle dll at "C:\Users\Ryan\Documents\CCS Mods\mods_tools\__tools\FModel\Output\.data\oo2core_9_win64.dll"
+2025-06-08 00:12:49 [WRN] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint.CheckForUpdateEvent: A new update is available! Version 4.4.4.0 (9f4597f542196a553c22079ad5af3e41cce01277)
+2025-06-08 00:12:49 [INF] CUE4Parse.Compression.ZlibHelper+<DownloadDllAsync>d__10.MoveNext: Successfully downloaded zlib-ng dll at "C:\Users\Ryan\Documents\CCS Mods\mods_tools\__tools\FModel\Output\.data\zlib-ng2.dll"
+2025-06-08 00:12:49 [INF] FModel.ViewModels.CUE4ParseViewModel.<Initialize>b__33_0: GAME_UE4_28 (DesktopMobile) | Archives: x3 | AES: x0 | Loose Files: x1
+2025-06-08 00:12:49 [ERR] FModel.ViewModels.ThreadWorkerViewModel+<ProcessQueues>d__24.MoveNext: System.AggregateException: One or more errors occurred. (Couldn't find LoaderGlobalNameHashes chunk in IoStore global.utoc)
+ ---> System.Collections.Generic.KeyNotFoundException: Couldn't find LoaderGlobalNameHashes chunk in IoStore global.utoc
+   at CUE4Parse.UE4.IO.IoGlobalData..ctor(IoStoreReader globalReader)
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.VerifyGlobalData(IAesVfsReader reader)
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.SubmitKeysAsync(IEnumerable`1 keys)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at FModel.ViewModels.CUE4ParseViewModel.LoadVfs(IEnumerable`1 aesKeys)
+   at FModel.ViewModels.ApplicationViewModel.<UpdateProvider>b__45_0(CancellationToken cancellationToken)
+   at FModel.ViewModels.ThreadWorkerViewModel.<>c__DisplayClass24_0.<ProcessQueues>b__0()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at FModel.ViewModels.ThreadWorkerViewModel.ProcessQueues()
+2025-06-08 00:12:49 [INF] CUE4Parse.UE4.IO.IoStoreReader.Mount: IoStore "CashCleanerSimulator-Windows.utoc": 7279 files, order 3, version 6 in 00:00:00.0135464
+2025-06-08 00:12:50 [INF] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint+<GetNewsAsync>d__9.MoveNext: ["Get"] [OK(200)] 'https://api.fmodel.app/v1/news/4.4.4.0?game=CashCleanerSimulator'
+2025-06-08 00:12:50 [INF] CUE4Parse_Conversion.Textures.BC.DetexHelper+<LoadDllAsync>d__10.MoveNext: Successfully loaded Detex DLL from embedded resources to "C:\Users\Ryan\Documents\CCS Mods\mods_tools\__tools\FModel\Output\.data\Detex.dll"
+2025-06-08 00:12:52 [INF] FModel.Services.DiscordHandler+<>c.<Initialize>b__6_0: @cyberryan (238771734721986560) is now ready
+2025-06-08 00:13:33 [INF] FModel.App.AppExit: ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+2025-06-08 00:13:34 [INF] FModel.App.OnStartup: Version 4.4.4.0 (8ba756ade5e9eced8fe64710a86b567c4ba03cc5)
+2025-06-08 00:13:34 [INF] FModel.App.OnStartup: Windows 11 Pro (64-bit)
+2025-06-08 00:13:34 [INF] FModel.App.OnStartup: .NET 8.0.16
+2025-06-08 00:13:34 [INF] FModel.App.OnStartup: Culture en-US
+2025-06-08 00:13:35 [INF] FModel.ViewModels.CUE4ParseViewModel.<Initialize>b__33_0: GAME_UE4_28 (DesktopMobile) | Archives: x3 | AES: x0 | Loose Files: x1
+2025-06-08 00:13:35 [ERR] FModel.ViewModels.ThreadWorkerViewModel+<ProcessQueues>d__24.MoveNext: System.AggregateException: One or more errors occurred. (Couldn't find LoaderGlobalNameHashes chunk in IoStore global.utoc)
+ ---> System.Collections.Generic.KeyNotFoundException: Couldn't find LoaderGlobalNameHashes chunk in IoStore global.utoc
+   at CUE4Parse.UE4.IO.IoGlobalData..ctor(IoStoreReader globalReader)
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.VerifyGlobalData(IAesVfsReader reader)
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.SubmitKeysAsync(IEnumerable`1 keys)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at FModel.ViewModels.CUE4ParseViewModel.LoadVfs(IEnumerable`1 aesKeys)
+   at FModel.ViewModels.ApplicationViewModel.<UpdateProvider>b__45_0(CancellationToken cancellationToken)
+   at FModel.ViewModels.ThreadWorkerViewModel.<>c__DisplayClass24_0.<ProcessQueues>b__0()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at FModel.ViewModels.ThreadWorkerViewModel.ProcessQueues()
+2025-06-08 00:13:35 [INF] CUE4Parse.UE4.IO.IoStoreReader.Mount: IoStore "CashCleanerSimulator-Windows.utoc": 7279 files, order 3, version 6 in 00:00:00.0149811
+2025-06-08 00:13:35 [WRN] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint.CheckForUpdateEvent: A new update is available! Version 4.4.4.0 (9f4597f542196a553c22079ad5af3e41cce01277)
+2025-06-08 00:13:35 [INF] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint+<GetNewsAsync>d__9.MoveNext: ["Get"] [OK(200)] 'https://api.fmodel.app/v1/news/4.4.4.0?game=CashCleanerSimulator'
+2025-06-08 00:13:37 [INF] FModel.Services.DiscordHandler+<>c.<Initialize>b__6_0: @cyberryan (238771734721986560) is now ready
+2025-06-08 00:13:53 [INF] FModel.App.AppExit: ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+2025-06-08 00:13:53 [INF] FModel.App.OnStartup: Version 4.4.4.0 (8ba756ade5e9eced8fe64710a86b567c4ba03cc5)
+2025-06-08 00:13:53 [INF] FModel.App.OnStartup: Windows 11 Pro (64-bit)
+2025-06-08 00:13:53 [INF] FModel.App.OnStartup: .NET 8.0.16
+2025-06-08 00:13:53 [INF] FModel.App.OnStartup: Culture en-US
+2025-06-08 00:13:53 [INF] FModel.ViewModels.CUE4ParseViewModel.<Initialize>b__33_0: GAME_UE5_4 (DesktopMobile) | Archives: x3 | AES: x0 | Loose Files: x1
+2025-06-08 00:13:54 [INF] CUE4Parse.UE4.Pak.PakFileReader.Mount: Pak "CashCleanerSimulator-Windows.pak": 4522 files, order 3, version 11 in 00:00:00.0143629
+2025-06-08 00:13:54 [INF] CUE4Parse.UE4.IO.IoStoreReader.Mount: IoStore "CashCleanerSimulator-Windows.utoc": 7279 files, order 3, version 6 in 00:00:00.0249297
+2025-06-08 00:13:54 [INF] FModel.ViewModels.CUE4ParseViewModel.LoadVfs: Project: CashCleanerSimulator | Mounted: 2/3 | AES: 1/1 | Files: x11802
+2025-06-08 00:13:54 [WRN] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint.CheckForUpdateEvent: A new update is available! Version 4.4.4.0 (9f4597f542196a553c22079ad5af3e41cce01277)
+2025-06-08 00:13:54 [INF] FModel.ViewModels.ApiEndpoints.FModelApiEndpoint+<GetNewsAsync>d__9.MoveNext: ["Get"] [OK(200)] 'https://api.fmodel.app/v1/news/4.4.4.0?game=CashCleanerSimulator'
+2025-06-08 00:13:56 [INF] FModel.Services.DiscordHandler+<>c.<Initialize>b__6_0: @cyberryan (238771734721986560) is now ready
+2025-06-08 00:14:53 [INF] FModel.ViewModels.CUE4ParseViewModel+<>c__DisplayClass38_0.<InitMappings>b__0: Mappings pulled from 'Mappings.usmap'
+2025-06-08 01:18:09 [INF] FModel.App.AppExit: ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
